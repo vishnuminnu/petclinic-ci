@@ -13,7 +13,7 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git 'https://github.com/vishnuminnu/petclinic-ci.git'
+                git 'https://github.com/spring-projects/spring-petclinic'
             }
         }
 
