@@ -23,10 +23,12 @@ pipeline {
             }
         }
 
-        stage('Deploy') {
+       stage('Deploy') {
             steps {
-                sh 'scp -i /home/vishnu/Downloads/project2.pem target/*.war ubuntu@174.129.142.39:/opt/tomcat/webapps/petclinic.war'
+                sh 'scp -i /var/lib/jenkins/.ssh/project-2.pem target/*.war ubuntu@174.129.142.39:/opt/tomcat/webapps/petclinic.war'
+        }
             }
+
         }
     }
 }
