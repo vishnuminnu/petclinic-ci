@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     tools {
-        maven 'Maven 3.8.5' // Ensure Maven 3.8.5 is installed via Jenkins Global Tools
-        jdk 'JDK11'         // Ensure JDK 11 is installed via Jenkins Global Tools
+        maven 'Maven 3.8.5'
+        jdk 'JDK11'
     }
 
     environment {
@@ -23,12 +23,10 @@ pipeline {
             }
         }
 
-       stage('Deploy') {
+        stage('Deploy') {
             steps {
                 sh 'scp -i /var/lib/jenkins/.ssh/project-2.pem target/*.war ubuntu@174.129.142.39:/opt/tomcat/webapps/petclinic.war'
-        }
             }
-
         }
     }
 }
