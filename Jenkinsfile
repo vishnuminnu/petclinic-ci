@@ -13,7 +13,7 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git 'https://github.com/vishnuminnu/petclinic-ci'
+                git branch: 'main', url: 'https://github.com/vishnuminnu/petclinic-ci'
             }
         }
 
